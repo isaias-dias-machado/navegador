@@ -555,7 +555,7 @@ input:focus-visible {
 
 .campaign__content {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.85fr);
+  /* grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.85fr); */
   align-items: start;
   gap: 90px;
   padding-top: 96px;
@@ -812,8 +812,17 @@ input:focus-visible {
    Rewards
    -------------------------------------------------------------------------- */
 
+.rewards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  gap: 22px;
+}
+
 .rewards__header {
-  margin-bottom: 28px;
+  grid-column: 1 / -1;
+  margin-bottom: 6px;
 }
 
 .rewards__title {
@@ -829,7 +838,7 @@ input:focus-visible {
 
 .reward-card {
   position: relative;
-  margin-bottom: 22px;
+  height: 100%;
   padding: 30px;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
@@ -842,6 +851,7 @@ input:focus-visible {
 }
 
 .reward-card__body {
+  height: 100%;
   padding: 30px;
 }
 
@@ -1187,18 +1197,11 @@ input:focus-visible {
   }
 
   .rewards {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
   }
 
-  .rewards__header,
   .organiser {
     grid-column: 1 / -1;
-  }
-
-  .reward-card {
-    margin-bottom: 0;
   }
 
   .site-footer__content {
@@ -1349,11 +1352,8 @@ input:focus-visible {
   }
 
   .rewards {
-    display: block;
-  }
-
-  .reward-card {
-    margin-bottom: 18px;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .site-footer__content {
