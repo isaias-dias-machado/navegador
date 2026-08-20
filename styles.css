@@ -75,6 +75,8 @@ h3 {
   font-family: var(--font-heading);
   line-height: 1.1;
   letter-spacing: -0.04em;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 button,
@@ -568,6 +570,11 @@ input:focus-visible {
   line-height: 1.4;
 }
 
+.story__pillars {
+  margin: 0.75em 0 0;
+  padding-left: 1.5em;
+}
+
 .story-section__title,
 .section-heading__title,
 .comments__title,
@@ -580,6 +587,7 @@ input:focus-visible {
 .story-section__copy {
   color: var(--color-text-muted);
   font-size: 17px;
+  margin: 10px;
 }
 
 .feature-list {
@@ -1018,6 +1026,7 @@ input:focus-visible {
    -------------------------------------------------------------------------- */
 
 @media (max-width: 980px) {
+
   .campaign__overview,
   .campaign__content {
     grid-template-columns: 1fr;
@@ -1144,7 +1153,7 @@ input:focus-visible {
 
   .story__lead {
     margin-bottom: 52px;
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .story-section__title,
@@ -1187,6 +1196,7 @@ input:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
