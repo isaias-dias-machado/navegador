@@ -72,11 +72,16 @@ dd {
 h1,
 h2,
 h3 {
+
   font-family: var(--font-heading);
   line-height: 1.1;
   letter-spacing: -0.04em;
-  margin-top: 50px;
   margin-bottom: 30px;
+}
+
+h2,
+h3 {
+  margin-top: 50px;
 }
 
 button,
@@ -631,6 +636,98 @@ input:focus-visible {
   font-size: 15px;
 }
 
+/* --------------------------------------------------------------------------
+   Funding details
+   -------------------------------------------------------------------------- */
+
+.funding-details {
+  margin-top: 80px;
+  padding-top: 56px;
+  border-top: 1px solid var(--color-border);
+}
+
+.funding-details__title {
+  margin: 0 0 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.funding-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 30px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.funding-breakdown__item {
+  padding: 20px 18px 20px 0;
+}
+
+.funding-breakdown__item+.funding-breakdown__item {
+  padding-left: 18px;
+  border-left: 1px solid var(--color-border);
+}
+
+.funding-breakdown dt {
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.funding-breakdown dd {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.funding-details__intro {
+  max-width: 710px;
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+.funding-details__allocation {
+  margin-top: 48px;
+}
+
+.funding-details__subtitle {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.funding-details__group {
+  padding-block: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.funding-details__group h4 {
+  margin: 0 0 12px;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.funding-details__group ul {
+  margin: 0;
+  padding-left: 20px;
+  columns: 2;
+  column-gap: 42px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.funding-details__group li {
+  break-inside: avoid;
+  margin-bottom: 5px;
+  padding-left: 3px;
+}
+
 .testimonial {
   margin-bottom: 88px;
   padding: 46px 48px;
@@ -723,6 +820,13 @@ input:focus-visible {
   margin-bottom: 0;
 }
 
+.rewards__intro {
+  margin-top: 12px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .reward-card {
   position: relative;
   margin-bottom: 22px;
@@ -739,6 +843,10 @@ input:focus-visible {
 
 .reward-card__body {
   padding: 30px;
+}
+
+.reward-card--featured .reward-card__body {
+  padding-top: 62px;
 }
 
 .reward-card__header {
@@ -765,8 +873,42 @@ input:focus-visible {
 }
 
 .reward-card__title {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   font-size: 21px;
+}
+
+.reward-card__subtitle {
+  margin: -3px 0 18px;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reward-card__benefits {
+  display: grid;
+  gap: 11px;
+  margin: 0 0 26px;
+  padding: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  list-style: none;
+}
+
+.reward-card__benefits li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.reward-card__benefits li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-primary);
+  content: "✓";
+  font-weight: 700;
 }
 
 .reward-card__description {
@@ -1129,16 +1271,23 @@ input:focus-visible {
   }
 
   .campaign-nav {
-    overflow-x: auto;
+    overflow-x: visible;
   }
 
   .campaign-nav__inner {
-    min-width: max-content;
+    min-width: 0;
     min-height: 60px;
   }
 
   .campaign-nav__list {
-    gap: 25px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .campaign-nav__link {
+    white-space: nowrap;
+    font-size: 12px;
   }
 
   .campaign-nav__action {
@@ -1161,6 +1310,33 @@ input:focus-visible {
   .comments__title,
   .rewards__title {
     font-size: 29px;
+  }
+
+  .funding-details {
+    margin-top: 64px;
+    padding-top: 44px;
+  }
+
+  .funding-details__title {
+    font-size: 27px;
+  }
+
+  .funding-breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-breakdown__item,
+  .funding-breakdown__item+.funding-breakdown__item {
+    padding: 16px 0;
+    border-left: 0;
+  }
+
+  .funding-breakdown__item+.funding-breakdown__item {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .funding-details__group ul {
+    columns: 1;
   }
 
   .testimonial {
