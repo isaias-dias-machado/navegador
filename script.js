@@ -1,23 +1,6 @@
-const menuButton = document.querySelector(".menu-button");
-const mobileMenu = document.querySelector("#mobile-menu");
 const shareButton = document.querySelector("[data-share]");
 const toast = document.querySelector(".toast");
-const newsletterForm = document.querySelector(".newsletter-form");
-
-menuButton?.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
-  mobileMenu.hidden = isOpen;
-});
-
-mobileMenu?.addEventListener("click", (event) => {
-  if (event.target instanceof HTMLAnchorElement) {
-    mobileMenu.hidden = true;
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation");
-  }
-});
+const newsletterForm = document.querySelector(".newsletter__form");
 
 shareButton?.addEventListener("click", async () => {
   const shareData = {
@@ -48,9 +31,9 @@ shareButton?.addEventListener("click", async () => {
 
 newsletterForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const input = newsletterForm.querySelector("input");
+  const input = newsletterForm.querySelector(".newsletter__input");
   if (!input.reportValidity()) return;
-  const button = newsletterForm.querySelector("button");
+  const button = newsletterForm.querySelector(".newsletter__submit");
   button.textContent = "✓";
   input.value = "";
   input.placeholder = "Thanks for joining";

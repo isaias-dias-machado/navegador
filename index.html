@@ -10,59 +10,14 @@
     <title>Greenhouse Commons — Community Crowdfunding</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="#" aria-label="Gather home">
-          <span class="brand-mark" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-          <span>gather</span>
-        </a>
-
-        <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="#discover">Discover</a>
-          <a href="#how-it-works">How it works</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="icon-button" type="button" aria-label="Search">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="6.5"></circle>
-              <path d="m16 16 4 4"></path>
-            </svg>
-          </button>
-          <a class="login-link" href="#">Log in</a>
-          <a class="button button-small" href="#start">Start a project</a>
-          <button
-            class="menu-button"
-            type="button"
-            aria-label="Open navigation"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="#discover">Discover</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#">Log in</a>
-        <a href="#start">Start a project</a>
-      </nav>
-    </header>
-
     <main id="main-content">
-      <section class="campaign shell" id="discover" aria-labelledby="campaign-title">
-        <div class="campaign-heading">
+      <article class="campaign">
+        <header class="campaign__header page-container">
           <div>
-            <div class="eyebrow">Community · Bristol, UK</div>
-            <h1 id="campaign-title">Let’s grow something<br />good, together.</h1>
-            <p class="campaign-intro">
+            <h1 class="campaign__title">O Navegador 20</h1>
+            <p class="campaign__summary">
               We’re turning an empty corner of our neighbourhood into a thriving
               community greenhouse—built for growing food, sharing skills, and
               bringing people together.
@@ -70,7 +25,7 @@
           </div>
 
           <button class="share-button" type="button" data-share>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="share-button__icon" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="18" cy="5" r="2.5"></circle>
               <circle cx="6" cy="12" r="2.5"></circle>
               <circle cx="18" cy="19" r="2.5"></circle>
@@ -78,257 +33,339 @@
             </svg>
             <span>Share</span>
           </button>
-        </div>
 
-        <div class="campaign-grid">
-          <div class="hero-placeholder" role="img" aria-label="Image placeholder for the community greenhouse">
-            <div class="sun-shape"></div>
-            <div class="leaf leaf-one"></div>
-            <div class="leaf leaf-two"></div>
-            <div class="placeholder-label">Project image</div>
+          <div class="campaign__overview">
+            <figure
+              class="media-placeholder media-placeholder--hero"
+              aria-label="Image placeholder for the community greenhouse"
+            >
+              <span class="media-placeholder__sun" aria-hidden="true"></span>
+              <span
+                class="media-placeholder__leaf media-placeholder__leaf--left"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="media-placeholder__leaf media-placeholder__leaf--right"
+                aria-hidden="true"
+              ></span>
+              <figcaption class="media-placeholder__label">Project image</figcaption>
+            </figure>
+
+            <section class="funding-summary" aria-labelledby="funding-title">
+              <h2 class="funding-summary__label" id="funding-title">Raised so far</h2>
+              <p class="funding-summary__amount">£18,640</p>
+              <p class="funding-summary__goal">of £25,000 goal</p>
+
+              <div
+                class="progress"
+                role="progressbar"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Campaign is 75 percent funded"
+              >
+                <span class="progress__value"></span>
+              </div>
+
+              <dl class="campaign-stats">
+                <div class="campaign-stats__item">
+                  <dt class="campaign-stats__label">Funded</dt>
+                  <dd class="campaign-stats__value">75%</dd>
+                </div>
+                <div class="campaign-stats__item">
+                  <dt class="campaign-stats__label">Supporters</dt>
+                  <dd class="campaign-stats__value">214</dd>
+                </div>
+                <div class="campaign-stats__item">
+                  <dt class="campaign-stats__label">Days left</dt>
+                  <dd class="campaign-stats__value">18</dd>
+                </div>
+              </dl>
+
+              <a class="button button--primary button--large button--full" href="#rewards">
+                Back this project
+              </a>
+
+              <p class="funding-summary__assurance">
+                <svg class="funding-summary__assurance-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3 5 6v5c0 4.5 2.8 8 7 10 4.2-2 7-5.5 7-10V6l-7-3Z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>
+                  All-or-nothing funding. You’ll only be charged if the project
+                  meets its goal.
+                </span>
+              </p>
+            </section>
+          </div>
+        </header>
+
+        <nav class="campaign-nav" aria-label="Campaign sections">
+          <div class="campaign-nav__inner page-container">
+            <ul class="campaign-nav__list">
+              <li class="campaign-nav__item">
+                <a class="campaign-nav__link campaign-nav__link--active" href="#story">Story</a>
+              </li>
+              <li class="campaign-nav__item">
+                <a class="campaign-nav__link" href="#updates">
+                  Updates <span class="campaign-nav__count">3</span>
+                </a>
+              </li>
+              <li class="campaign-nav__item">
+                <a class="campaign-nav__link" href="#comments">
+                  Comments <span class="campaign-nav__count">24</span>
+                </a>
+              </li>
+            </ul>
+            <a class="button button--primary button--small campaign-nav__action" href="#rewards">
+              Back this project
+            </a>
+          </div>
+        </nav>
+
+        <div class="campaign__content page-container">
+          <div class="campaign__story-column">
+            <section class="story" id="story" aria-labelledby="story-title">
+              <h2 class="visually-hidden" id="story-title">Our story</h2>
+              <p class="story__lead">
+                Vimos convidar-te a conhecer o projecto O Navegador 20 e pedir o teu apoio,
+                através deste crowdfunding, para nos ajudares no próximo passo do projecto. A
+                associação O Navegador, actualmente albergada num pequeno estúdio no Bonfim,
+                pretende dar o salto para um novo espaço físico no centro do Porto onde possa
+                continuar a crescer e abrir as portas a mais projectos da cidade (actualmente,
+                alberga principalmente o Bota Swing e o Brocolá). Um navegador sócio-cultural,
+                destinado a ser um espaço de convívio, partilha e cultura que assenta na acção
+                por três pilares: 
+
+                1) Música, Dança Social e Movimento;
+                2) Alimentação e Convívio;
+                3) Cultura Local, Workshops, apresentações, partilhas e conversas.
+              </p>
+
+              <section class="story-section" aria-labelledby="greenhouse-title">
+                <h2 class="story-section__title" id="greenhouse-title">A greenhouse for everyone</h2>
+                <p class="story-section__copy">
+                  Greenhouse Commons will be a volunteer-led growing space, open to
+                  everyone. Local families will grow fresh produce, schools will run
+                  hands-on nature sessions, and neighbours of all ages can share what
+                  they know—from seed saving to cooking.
+                </p>
+
+                <figure
+                  class="media-placeholder media-placeholder--story"
+                  aria-label="Image placeholder for volunteers gardening"
+                >
+                  <figcaption class="media-placeholder__label">Community image</figcaption>
+                </figure>
+              </section>
+
+              <section class="story-section" aria-labelledby="build-title">
+                <h2 class="story-section__title" id="build-title">What your support will build</h2>
+                <p class="story-section__copy">
+                  We’ve secured the site and planning permission. Now we need your
+                  help to build the space and open the doors. Every contribution
+                  brings the first planting day closer.
+                </p>
+
+                <ol class="feature-list">
+                  <li class="feature-list__item">
+                    <span class="feature-list__number" aria-hidden="true">01</span>
+                    <div>
+                      <h3 class="feature-list__title">An all-season growing space</h3>
+                      <p class="feature-list__copy">
+                        A durable, accessible greenhouse with raised beds and wide paths.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="feature-list__item">
+                    <span class="feature-list__number" aria-hidden="true">02</span>
+                    <div>
+                      <h3 class="feature-list__title">Tools for the whole community</h3>
+                      <p class="feature-list__copy">
+                        Shared equipment, rainwater storage, composting, and a seed library.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="feature-list__item">
+                    <span class="feature-list__number" aria-hidden="true">03</span>
+                    <div>
+                      <h3 class="feature-list__title">Free workshops and events</h3>
+                      <p class="feature-list__copy">
+                        Practical sessions led by local growers, cooks, and makers.
+                      </p>
+                    </div>
+                  </li>
+                </ol>
+              </section>
+
+              <!-- <figure class="testimonial"> -->
+              <!--   <blockquote class="testimonial__quote"> -->
+              <!--     “A place like this gives people a reason to stop, talk, and make -->
+              <!--     something together. That’s exactly what our street needs.” -->
+              <!--   </blockquote> -->
+              <!--   <figcaption class="testimonial__credit">— Priya, Willow Street resident</figcaption> -->
+              <!-- </figure> -->
+            </section>
+
+            <!-- <section class="updates" id="updates" aria-labelledby="updates-title"> -->
+            <!--   <header class="section-heading"> -->
+            <!--     <div> -->
+            <!--       <p class="eyebrow eyebrow--flush">From the team</p> -->
+            <!--       <h2 class="section-heading__title" id="updates-title">Project updates</h2> -->
+            <!--     </div> -->
+            <!--     <p class="section-heading__meta">3 updates</p> -->
+            <!--   </header> -->
+            <!---->
+            <!--   <article class="update-card"> -->
+            <!--     <time class="update-card__date" datetime="2026-08-14">14 August 2026</time> -->
+            <!--     <h3 class="update-card__title">We’ve crossed the halfway mark!</h3> -->
+            <!--     <p class="update-card__copy"> -->
+            <!--       Thank you to everyone who has pledged, shared, and cheered us on. -->
+            <!--       Site preparation begins next week. -->
+            <!--     </p> -->
+            <!--   </article> -->
+            <!-- </section> -->
+
+            <!-- <section class="comments" id="comments" aria-labelledby="comments-title"> -->
+            <!--   <p class="eyebrow eyebrow--compact">Join the conversation</p> -->
+            <!--   <h2 class="comments__title" id="comments-title">Questions or encouragement?</h2> -->
+            <!--   <p class="comments__copy"> -->
+            <!--     Log in to leave a comment for the Greenhouse Commons team. -->
+            <!--   </p> -->
+            <!--   <a class="text-link" href="#comments"> -->
+            <!--     View 24 comments <span class="text-link__arrow" aria-hidden="true">→</span> -->
+            <!--   </a> -->
+            <!-- </section> -->
           </div>
 
-          <aside class="funding-card" aria-label="Campaign funding progress">
-            <p class="funding-label">Raised so far</p>
-            <p class="funding-total">£18,640</p>
-            <p class="funding-goal">of £25,000 goal</p>
+          <aside class="rewards" id="rewards" aria-labelledby="rewards-title">
+            <header class="rewards__header">
+              <p class="eyebrow eyebrow--compact">Choose your support</p>
+              <h2 class="rewards__title" id="rewards-title">Rewards</h2>
+            </header>
 
-            <div
-              class="progress-track"
-              role="progressbar"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-label="Campaign is 75 percent funded"
-            >
-              <span></span>
-            </div>
+            <article class="reward-card">
+              <header class="reward-card__header">
+                <p class="reward-card__pledge-label">Pledge</p>
+                <p class="reward-card__amount">£10</p>
+              </header>
+              <h3 class="reward-card__title">A packet of possibility</h3>
+              <p class="reward-card__description">
+                A hand-packed envelope of seasonal seeds and a heartfelt thank-you
+                from our growing community.
+              </p>
+              <p class="reward-card__delivery">Estimated delivery: October 2026</p>
+              <button class="button button--outline button--full" type="button">Select reward</button>
+            </article>
 
-            <div class="funding-stats">
-              <div><strong>75%</strong><span>funded</span></div>
-              <div><strong>214</strong><span>supporters</span></div>
-              <div><strong>18</strong><span>days left</span></div>
-            </div>
+            <article class="reward-card reward-card--featured">
+              <p class="reward-card__badge">Most popular</p>
+              <figure
+                class="media-placeholder media-placeholder--reward"
+                aria-label="Reward image placeholder"
+              ></figure>
+              <div class="reward-card__body">
+                <header class="reward-card__header">
+                  <p class="reward-card__pledge-label">Pledge</p>
+                  <p class="reward-card__amount">£35</p>
+                </header>
+                <h3 class="reward-card__title">Founding grower</h3>
+                <p class="reward-card__description">
+                  Your name on our founding wall, a seed packet, and an invitation
+                  to our opening planting day.
+                </p>
+                <p class="reward-card__delivery">Estimated delivery: November 2026</p>
+                <p class="reward-card__availability">
+                  <span class="reward-card__availability-dot" aria-hidden="true"></span>
+                  68 of 100 remaining
+                </p>
+                <button class="button button--primary button--full" type="button">Select reward</button>
+              </div>
+            </article>
 
-            <a class="button button-full button-large" href="#rewards">Back this project</a>
-            <p class="assurance">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3 5 6v5c0 4.5 2.8 8 7 10 4.2-2 7-5.5 7-10V6l-7-3Z"></path>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              All-or-nothing funding. You’ll only be charged if the project meets
-              its goal.
-            </p>
+            <article class="reward-card">
+              <header class="reward-card__header">
+                <p class="reward-card__pledge-label">Pledge</p>
+                <p class="reward-card__amount">£75</p>
+              </header>
+              <h3 class="reward-card__title">Adopt a growing bed</h3>
+              <p class="reward-card__description">
+                Sponsor a raised bed for our first season. We’ll add a hand-painted
+                sign with your name or dedication.
+              </p>
+              <p class="reward-card__delivery">Estimated delivery: March 2027</p>
+              <button class="button button--outline button--full" type="button">Select reward</button>
+            </article>
+
+            <section class="organiser" aria-labelledby="organiser-title">
+              <div class="organiser__avatar" aria-hidden="true">GC</div>
+              <div>
+                <p class="organiser__label">Project by</p>
+                <h2 class="organiser__name" id="organiser-title">Greenhouse Commons</h2>
+                <address class="organiser__location">Bristol, United Kingdom</address>
+              </div>
+              <a class="organiser__link" href="#organiser-title">View profile</a>
+            </section>
           </aside>
         </div>
-      </section>
-
-      <nav class="section-nav" id="how-it-works" aria-label="Campaign sections">
-        <div class="shell section-nav-inner">
-          <div>
-            <a class="active" href="#story">Story</a>
-            <a href="#updates">Updates <span>3</span></a>
-            <a href="#comments">Comments <span>24</span></a>
-          </div>
-          <a class="button button-small nav-pledge" href="#rewards">Back this project</a>
-        </div>
-      </nav>
-
-      <div class="content-grid shell">
-        <article id="story" class="story">
-          <p class="story-lead">
-            There’s a patch of land on Willow Street that’s been empty for years.
-            We see something different: a warm, green place where our whole
-            neighbourhood can learn, grow, and belong.
-          </p>
-
-          <h2>A greenhouse for everyone</h2>
-          <p>
-            Greenhouse Commons will be a volunteer-led growing space, open to
-            everyone. Local families will grow fresh produce, schools will run
-            hands-on nature sessions, and neighbours of all ages can share what
-            they know—from seed saving to cooking.
-          </p>
-
-          <div class="story-placeholder" role="img" aria-label="Image placeholder for volunteers gardening">
-            <span>Community image</span>
-          </div>
-
-          <h2>What your support will build</h2>
-          <p>
-            We’ve secured the site and planning permission. Now we need your help
-            to build the space and open the doors. Every contribution brings the
-            first planting day closer.
-          </p>
-
-          <ul class="feature-list">
-            <li>
-              <span class="feature-icon" aria-hidden="true">01</span>
-              <div>
-                <h3>An all-season growing space</h3>
-                <p>A durable, accessible greenhouse with raised beds and wide paths.</p>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon" aria-hidden="true">02</span>
-              <div>
-                <h3>Tools for the whole community</h3>
-                <p>Shared equipment, rainwater storage, composting, and a seed library.</p>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon" aria-hidden="true">03</span>
-              <div>
-                <h3>Free workshops and events</h3>
-                <p>Practical sessions led by local growers, cooks, and makers.</p>
-              </div>
-            </li>
-          </ul>
-
-          <div class="quote-card">
-            <blockquote>
-              “A place like this gives people a reason to stop, talk, and make
-              something together. That’s exactly what our street needs.”
-            </blockquote>
-            <p>— Priya, Willow Street resident</p>
-          </div>
-
-          <section id="updates" class="updates-section">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">From the team</p>
-                <h2>Project updates</h2>
-              </div>
-              <span>3 updates</span>
-            </div>
-            <article class="update-card">
-              <time datetime="2026-08-14">14 August 2026</time>
-              <h3>We’ve crossed the halfway mark!</h3>
-              <p>
-                Thank you to everyone who has pledged, shared, and cheered us on.
-                Site preparation begins next week.
-              </p>
-            </article>
-          </section>
-
-          <section id="comments" class="comments-section">
-            <p class="eyebrow">Join the conversation</p>
-            <h2>Questions or encouragement?</h2>
-            <p>Log in to leave a comment for the Greenhouse Commons team.</p>
-            <a class="text-link" href="#">View 24 comments <span aria-hidden="true">→</span></a>
-          </section>
-        </article>
-
-        <aside class="sidebar" id="rewards" aria-labelledby="rewards-title">
-          <div class="sidebar-heading">
-            <p class="eyebrow">Choose your support</p>
-            <h2 id="rewards-title">Rewards</h2>
-          </div>
-
-          <article class="reward-card">
-            <div class="reward-topline">
-              <span>Pledge</span><strong>£10</strong>
-            </div>
-            <h3>A packet of possibility</h3>
-            <p>
-              A hand-packed envelope of seasonal seeds and a heartfelt thank-you
-              from our growing community.
-            </p>
-            <p class="reward-meta">Estimated delivery: October 2026</p>
-            <button class="button button-outline button-full" type="button">Select reward</button>
-          </article>
-
-          <article class="reward-card featured-reward">
-            <span class="popular-tag">Most popular</span>
-            <div class="reward-placeholder" role="img" aria-label="Reward image placeholder"></div>
-            <div class="reward-content">
-              <div class="reward-topline">
-                <span>Pledge</span><strong>£35</strong>
-              </div>
-              <h3>Founding grower</h3>
-              <p>
-                Your name on our founding wall, a seed packet, and an invitation
-                to our opening planting day.
-              </p>
-              <p class="reward-meta">Estimated delivery: November 2026</p>
-              <div class="availability"><span></span> 68 of 100 remaining</div>
-              <button class="button button-full" type="button">Select reward</button>
-            </div>
-          </article>
-
-          <article class="reward-card">
-            <div class="reward-topline">
-              <span>Pledge</span><strong>£75</strong>
-            </div>
-            <h3>Adopt a growing bed</h3>
-            <p>
-              Sponsor a raised bed for our first season. We’ll add a hand-painted
-              sign with your name or dedication.
-            </p>
-            <p class="reward-meta">Estimated delivery: March 2027</p>
-            <button class="button button-outline button-full" type="button">Select reward</button>
-          </article>
-
-          <div class="organiser-card">
-            <div class="organiser-avatar" aria-hidden="true">GC</div>
-            <div>
-              <p>Project by</p>
-              <h3>Greenhouse Commons</h3>
-              <span>Bristol, United Kingdom</span>
-            </div>
-            <a href="#">View profile</a>
-          </div>
-        </aside>
-      </div>
-
-      <section class="final-cta" id="start" aria-labelledby="final-cta-title">
-        <div class="shell final-cta-inner">
-          <p class="eyebrow">A little goes a long way</p>
-          <h2 id="final-cta-title">Help us put down roots.</h2>
-          <p>Join 214 neighbours and friends bringing Greenhouse Commons to life.</p>
-          <a class="button button-light button-large" href="#rewards">Back this project</a>
-        </div>
-      </section>
+      </article>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-grid">
-        <div>
-          <a class="brand brand-footer" href="#">
-            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-            <span>gather</span>
-          </a>
-          <p>Good ideas grow when we gather.</p>
-        </div>
-        <div>
-          <h2>Explore</h2>
-          <a href="#discover">Discover projects</a>
-          <a href="#start">Start a project</a>
-          <a href="#how-it-works">How it works</a>
-        </div>
-        <div>
-          <h2>About</h2>
-          <a href="#">Our story</a>
-          <a href="#">Trust &amp; safety</a>
-          <a href="#">Help centre</a>
-        </div>
-        <div>
-          <h2>Stay in the loop</h2>
-          <p>Fresh projects and good news, once a month.</p>
-          <form class="newsletter-form">
-            <label class="sr-only" for="email">Email address</label>
-            <input id="email" type="email" placeholder="Email address" />
-            <button type="submit" aria-label="Subscribe">→</button>
-          </form>
-        </div>
-      </div>
-      <div class="shell footer-bottom">
-        <span>© 2026 Gather Community Funding</span>
-        <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+      <!-- <div class="site-footer__content page-container"> -->
+      <!--   <section class="site-footer__about" aria-labelledby="footer-about-title"> -->
+      <!--     <h2 class="site-footer__brand" id="footer-about-title"> -->
+      <!--       <span class="brand-mark" aria-hidden="true"> -->
+      <!--         <span class="brand-mark__leaf"></span> -->
+      <!--         <span class="brand-mark__leaf"></span> -->
+      <!--         <span class="brand-mark__leaf"></span> -->
+      <!--       </span> -->
+      <!--       gather -->
+      <!--     </h2> -->
+      <!--     <p class="site-footer__tagline">Good ideas grow when we gather.</p> -->
+      <!--   </section> -->
+      <!---->
+      <!--   <nav class="footer-nav" aria-label="Explore"> -->
+      <!--     <h2 class="footer-nav__title">Explore</h2> -->
+      <!--     <ul class="footer-nav__list"> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#story">Discover projects</a></li> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#rewards">Start a project</a></li> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#updates">How it works</a></li> -->
+      <!--     </ul> -->
+      <!--   </nav> -->
+      <!---->
+      <!--   <nav class="footer-nav" aria-label="About"> -->
+      <!--     <h2 class="footer-nav__title">About</h2> -->
+      <!--     <ul class="footer-nav__list"> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#story">Our story</a></li> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#main-content">Trust &amp; safety</a></li> -->
+      <!--       <li class="footer-nav__item"><a class="footer-nav__link" href="#comments">Help centre</a></li> -->
+      <!--     </ul> -->
+      <!--   </nav> -->
+      <!---->
+      <!--   <section class="newsletter" aria-labelledby="newsletter-title"> -->
+      <!--     <h2 class="newsletter__title" id="newsletter-title">Stay in the loop</h2> -->
+      <!--     <p class="newsletter__description">Fresh projects and good news, once a month.</p> -->
+      <!--     <form class="newsletter__form"> -->
+      <!--       <label class="visually-hidden" for="email">Email address</label> -->
+      <!--       <input class="newsletter__input" id="email" type="email" placeholder="Email address" required /> -->
+      <!--       <button class="newsletter__submit" type="submit" aria-label="Subscribe">→</button> -->
+      <!--     </form> -->
+      <!--   </section> -->
+      <!-- </div> -->
+
+      <div class="site-footer__legal page-container">
+        <p>© 2026 Gather Community Funding</p>
+        <nav class="legal-nav" aria-label="Legal">
+          <a class="legal-nav__link" href="#main-content">Privacy</a>
+          <a class="legal-nav__link" href="#main-content">Terms</a>
+          <a class="legal-nav__link" href="#main-content">Accessibility</a>
+        </nav>
       </div>
     </footer>
 
-    <div class="toast" role="status" aria-live="polite" hidden>Project link copied</div>
+    <p class="toast" role="status" aria-live="polite" hidden>Project link copied</p>
+
     <script src="script.js"></script>
   </body>
 </html>
