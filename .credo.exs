@@ -4,9 +4,7 @@
       name: "default",
       checks: %{
         extra: [
-          {Credo.Check.Readability.Specs,
-           include_defp: false,
-           priority: :high}
+          {Credo.Check.Readability.Specs, include_defp: false, priority: :high}
         ]
       }
     }
