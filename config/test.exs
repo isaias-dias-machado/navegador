@@ -6,7 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :navegador, Navegador.Repo,
-  database: Path.expand("../navegador_test.db", __DIR__),
+  database:
+    Path.expand("../data/navegador_test#{System.get_env("MIX_TEST_PARTITION")}.db", __DIR__),
   pool_size: 5,
   pool: Ecto.Adapters.SQL.Sandbox
 

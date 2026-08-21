@@ -23,10 +23,7 @@ end
 if config_env() == :prod do
   database_path =
     System.get_env("DATABASE_PATH") ||
-      raise """
-      environment variable DATABASE_PATH is missing.
-      For example: /etc/navegador/navegador.db
-      """
+      Path.expand("../data/navegador_prod.db", __DIR__)
 
   config :navegador, Navegador.Repo,
     database: database_path,
